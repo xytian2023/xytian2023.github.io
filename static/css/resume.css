@@ -1,0 +1,118 @@
+header {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+header h1{
+    margin: 0px;
+    font-size: x-large;
+    color: #BAC8A0;
+    text-shadow:0 0 5px black;
+
+}
+
+header button{
+    background-color: blue;
+    font-family: Courier New;
+    color: white;
+}
+
+
+body {
+    font-family: Courier New;
+    font-size: 100%;
+    background-color: #5B8982;
+
+}
+
+
+/* set margin only for device larger than mobile */
+@media only screen and (min-width: 768px) {
+    body {
+        margin-left: 15%;
+        margin-right:15%;
+    }
+}
+
+.intrdouce_myself {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap:10px;
+
+}
+
+figure {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    margin-inline-start: 10px;
+}
+
+.info {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+   font-size: 0.9em;
+
+}
+
+.info p{
+    color: white; /*color: #FFFFFF;*/
+}
+
+
+
+
+.reason{
+    font-size:0.9em;
+    color: white;
+}
+
+
+figure > img {
+    /*padding-top: 4%;
+    margin: 15px;*/
+    margin-right: 15px;
+    width: 116%;
+
+}
+
+
+h2 {
+    background-color: rgba(255,255,255,0.3);
+}
+
+h2 span{
+    /*background-color:  #BAC8A0;*/
+    opacity: 0.8;
+    color: #BAC8A0;/*white;*/
+    font-weight:bold;
+    text-shadow:0 0 5px black;
+}
+
+.tech h2, .resources h2 {
+    text-align: center;
+}
+
+
+
+.tech_name {
+    /*font-size: 1em*/
+}
+
+.tech_name li{
+    color: white;
+}
+
+
+ul li a{
+    font-size: 0.9em;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
