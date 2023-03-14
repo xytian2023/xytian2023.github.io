@@ -1,0 +1,7 @@
+/*set margin for screen larger than small phone*/
+@media  only screen and (min-width: 601px) {
+    body {
+        margin-left: 19.4%;
+        margin-right:19.4%;
+    }
+}
