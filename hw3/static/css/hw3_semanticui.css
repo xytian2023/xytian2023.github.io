@@ -84,15 +84,4 @@
       font-size: 3.6rem;
     }
 
-    /*-- define the palette --*
-    @font-palette-values --Mint {
-      font-family: Rocher;
-      base-palette: 7;
-    }
-
-    /* use the palette *
-    .mint {
-      font-palette: --Mint;
-    }*/
-
 
