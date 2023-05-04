@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My First PWA">
+    <title>XYT'S HW4-PWA</title>
+    <script>
+      // Add a global error event listener early on in the page load, to help ensure that browsers
+      // which don't support specific functionality still end up displaying a meaningful message.
+      window.addEventListener('error', function(error) {
+        if (ChromeSamples && ChromeSamples.setStatus) {
+          console.error(error);
+          ChromeSamples.setStatus(error.message + ' (Your browser may not support this feature.)');
+          error.preventDefault();
+        }
+      });
+    </script>
+    <link rel="stylesheet" href="hw4.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+        <div class="container-fluid">
+          <a class="navbar-brand">XYT's HW4-PWA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" data-bs-dismiss="collapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+
+              <div style="display: flex; justify-content: flex-end;">
+                  <label for="bgc-select">Select a background-image: &nbsp;</label>
+                  <select id="bgc-select">
+                        <option value=""> </option>
+                       <option value="img/lightblue.jpg">Light Blue</option>
+                       <option value="img/lightgold.jpg">Light Gold</option>
+                  </select>
+              </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+     <main>
+         <article  class="container">
+            <h2>PWA characteristics</h2>
+            <p>A Progressive Web App (PWA) is a web application that provides a native-like experience to users, using modern web capabilities to deliver an app-like experience.</p>
+            <p>Some key characteristics of PWAs include:</p>
+            <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">characteristics</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+               <th>
+                    <a href="" target="_blank" rel="noopener noreferrer">
+                        Reliable
+                    </a>
+                </th>
+                <td>PWAs load instantly, even when the network is unreliable, thanks to service workers that cache the app shell.</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                    <a href="" target="_blank" rel="noopener noreferrer">
+                        Fast
+                    </a>
+                </th>
+                <td>PWAs feel fast and responsive, with smooth animations and interactions, thanks to the use of web technologies like Web Animations API and WebRTC.</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                      <a href="" target="_blank" rel="noopener noreferrer">
+                          Engaging
+                      </a>
+                </th>
+                <td>
+                  PWAs can be added to the home screen, provide push notifications, and have access to device features like camera and location, making them feel like native apps.
+                </td>
+              </tr>
+            </tbody>
+            </table>
+          </article>
+     </main>
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="hw4.js"></script>
+      <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js');
+        }
+      </script>
+
+</body>
+</html>
